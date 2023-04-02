@@ -6,8 +6,9 @@ const spanElement = document.querySelector("span");
 /**
  * Your challenge: figure out why divElement2 is NOT
  * of type HTMLDivElement.
+ * Because it's not in HTMLElementTagNameMap.
  */
-const divElement2 = document.querySelector("div.foo");
+const divElement2 = document.querySelector("div");
 
 type tests = [
   Expect<Equal<typeof divElement, HTMLDivElement | null>>,
