@@ -4,8 +4,7 @@ import { Equal, Expect } from "../helpers/type-utils";
 const createClassNamesFactory =
   <TVariant extends string>(classes: Record<TVariant, string>) =>
   (type: TVariant, ...otherClasses: string[]) => {
-    const classList = [classes[type], ...otherClasses];
-    return classList.join(" ");
+    return [classes[type], ...otherClasses].join(" ");
   };
 
 const getBg = createClassNamesFactory({

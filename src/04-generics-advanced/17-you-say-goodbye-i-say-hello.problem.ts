@@ -1,7 +1,9 @@
 import { expect, it } from "vitest";
 import { Equal, Expect } from "../helpers/type-utils";
 
-function youSayGoodbyeISayHello(greeting: unknown) {
+type Greeting = "goodbye" | "hello";
+
+function youSayGoodbyeISayHello< T extends Greeting >(greeting: T) {
   return greeting === "goodbye" ? "hello" : "goodbye";
 }
 
