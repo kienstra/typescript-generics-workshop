@@ -1,9 +1,11 @@
 import { Equal, Expect } from "../helpers/type-utils";
 
+function returnWhatIPassIn< T extends string >(t: T): T;
+function returnWhatIPassIn< T extends number> (t: T): T;
 /**
  * This time, let's solve this with function overloads!
  */
-const returnWhatIPassIn = (t: unknown) => {
+function returnWhatIPassIn(t: any) {
   return t;
 };
 
